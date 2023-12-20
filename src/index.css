@@ -1,4 +1,231 @@
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+
+
+
+}
+
 :root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(2) translate(0%, 0%);
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(16) translate(2.5%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(0.3) translate(0%, 0%);
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(0.3) translate(0%, 0%);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.8) translate(0%, 0%);
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOutCouch {
+  0% {
+    transform: scale(0.8) translate(-28%, 33%);
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(0.8) translate(-28%, 33%);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.8);
+    translate: (-28%, 43%);
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #5b5b5b91;
+  /* Change this color as needed */
+}
+#serVices {
+  font-family: 'Koulen', sans-serif;
+  font-size: 200px;
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  /* Apply background to text */
+  -webkit-text-fill-color: transparent;
+  /* For Safari/WebKit */
+  -webkit-text-stroke: 3px #444444;
+  /* Stroke around text */
+  animation: 'zoomOutCouch 4s ease-out forwards';
+}
+#marketingPlan{
+  font-family: 'Koulen', sans-serif;
+    font-size: 150px;
+    text-align: center;
+    color: transparent;
+    background-clip: text;
+    /* Apply background to text */
+    -webkit-text-fill-color: transparent;
+    /* For Safari/WebKit */
+    -webkit-text-stroke: 3px #f5f5f5;
+    /* Stroke around text */
+    animation: 'zoomOutCouch 4s ease-out forwards';
+}
+#experTise {
+  font-family: 'Koulen', sans-serif;
+  font-size: 150px;
+  text-align: center;
+  color: transparent;
+  background-clip: text;
+  /* Apply background to text */
+  -webkit-text-fill-color: transparent;
+  /* For Safari/WebKit */
+  -webkit-text-stroke: 4px #fc3832;
+  /* Stroke around text */
+  animation: 'zoomOutCouch 4s ease-out forwards';
+}
+#paragraph {
+  font-family: 'Koulen', sans-serif;
+  font-size: 40px;
+  text-align: left;
+  color: white;
+
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+
+
+  font-size: 18px;
+  cursor: pointer;
+  color: #FFFFFF;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  nav {
+    padding: 5px;
+  }
+
+  nav ul li:hover {
+    color: #333;
+  }
+}
+
+.animation, .animation_layer {
+  height: 1000px;
+}
+.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: auto 1038px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+.animation_layer.parallax{
+  position: fixed;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  /* Align items horizontally */
+  text-align: left;
+  /* Center text within the container */
+}
+
+@media screen and (max-width: 768px) {
+  img {
+    /* Adjust styles for smaller screens */
+    width: 30vw;
+    /* Modify width for smaller screens */
+    bottom: 10vw;
+    /* Modify bottom positioning for smaller screens */
+    left: 5vw;
+    /* Modify left positioning for smaller screens */
+  }
+}
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +292,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
